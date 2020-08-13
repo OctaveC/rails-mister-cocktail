@@ -1,0 +1,11 @@
+<div class="container">
+<h1 class="need_space">Your Cocktails</h1>
+<div class="cards">
+  <% @cocktails.each do |cocktail| %>
+  <% url = "../../assets/background_#{rand(8)}.jpg" %>
+  <div class="card" style="background-image: url(<%= url %>)">
+    <%= link_to cocktail.name, cocktail_path(cocktail.id) %>
+  </div>
+  <% end %>
+</div>
+</div>

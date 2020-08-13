@@ -1,0 +1,13 @@
+<h2><%= @cocktail.name %></h2>
+
+<% number_of_itteration = 0  %>
+<% @cocktail.doses.each do |dose| %>
+  <p>Ingredient <%= number_of_itteration += 1 %>: <%=  dose.ingredient.name %></p>
+  <p>Amount: <%=  dose.description %></p>
+  <%= link_to "🗑️",
+      dose_path(dose),
+      method: :delete,
+      data: { confirm: "Are you sure?" } %>
+<% end %>
+<%= link_to 'Go back', cocktails_path %>
+<%= link_to 'Add ingredient', new_cocktail_dose_path(@cocktail) %>

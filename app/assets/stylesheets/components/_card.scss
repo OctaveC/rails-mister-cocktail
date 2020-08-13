@@ -1,0 +1,25 @@
+.container {
+  width: 50%;
+  margin: 50px auto;
+}
+
+.cards {
+  display: flex;
+  justify-content: space-around;
+}
+// .troglodyte {
+//   background-image: url('truc.jpg');
+//   background-size: cover;
+//   background-position: center;
+// }
+
+.card {
+  box-shadow: 0px 10px 30px rgba(0,0,0,0.09);
+  height: 250px;
+  width: 250px;
+  text-align: center;
+  padding: 50px auto;
+  // background-image: url('truc.jpg');
+  background-size: cover;
+  background-position: center;
+}
