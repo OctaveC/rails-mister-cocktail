@@ -11,10 +11,10 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
-    <nav class="box navbar navbar-expand-lg navbar-light bg-light">
-      <a class="item1 navbar-brand" href="http://localhost:3000/cocktails">Mister Cocktail</a>
-      <a class="item2 navbar-brand" href="http://localhost:3000/cocktails/new">New Cocktail</a>
+  <body class="<%= 'bigcontainer' if params[:controller] == 'cocktails' && params[:action] == 'index' %>">
+    <nav class="navbar-lewagon navbar navbar-expand-lg navbar-light bg-light">
+      <%= link_to 'Mister Cocktail', cocktails_path, class: "item1 navbar-brand" %>
+      <%= link_to 'New Cocktail', new_cocktail_path, class: "item2 navbar-brand" %>
     </nav>
 
     <%= yield %>
